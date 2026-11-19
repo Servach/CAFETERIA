@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cafecita</title>
+  <meta name="description" content="Cafecita: café, bebidas frías y menú con precios.">
+  <meta name="theme-color" content="#254c22">
+  <link rel="icon" href="assets/img/bean-green.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@500;700;800&family=Allura&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a href="#inicio" class="nav__logo" aria-label="Cafecita, inicio">
+      <img src="assets/img/logo-green.png" alt="Cafecita">
+    </a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#menu">Menú</a>
+      <a href="#mood">Qué pedir</a>
+      <a href="#frases">Frases</a>
+      <a href="#visitanos">Visítanos</a>
+      <a href="#visitanos" class="btn btn--small">Pide el tuyo</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <img src="assets/img/leafL-green.png" class="deco deco--leafL" alt="" aria-hidden="true">
+      <img src="assets/img/leafR-green.png" class="deco deco--leafR" alt="" aria-hidden="true">
+      <img src="assets/img/bean-green.png" class="deco deco--bean b1" alt="" aria-hidden="true">
+      <img src="assets/img/bean-green.png" class="deco deco--bean b2" alt="" aria-hidden="true">
+
+      <div class="hero__text reveal">
+        <div class="hero__badges">
+          <span class="pill">Cafetería de barrio</span>
+          <a href="#visitanos" class="open-chip" id="heroStatus"></a>
+        </div>
+        <h1>Un cafecito y <em class="script">seguimos</em></h1>
+        <p>Expresso, lattes, horchata, sodas italianas. Lo preparamos al momento, para tomar aquí o llevar.</p>
+        <div class="hero__cta">
+          <a href="#menu" class="btn">Ver el menú</a>
+          <a href="#visitanos" class="btn btn--ghost">Cómo llegar</a>
+        </div>
+        <ul class="hero__stats">
+          <li><strong>355</strong><span>ml calientes</span></li>
+          <li><strong>473</strong><span>ml frías</span></li>
+          <li><strong>$27</strong><span>el expresso</span></li>
+        </ul>
+      </div>
+
+      <div class="hero__visual reveal">
+        <div class="blob"></div>
+        <img src="assets/img/cup-hot.png" class="cup cup--hot" alt="Vaso de café caliente Cafecita con funda kraft">
+        <img src="assets/img/cup-cold.png" class="cup cup--cold" alt="Soda italiana de fresa con hielo en vaso Cafecita">
+        <span class="sticker sticker--a">Para<br>llevar</span>
+        <span class="sticker sticker--b"><img src="assets/img/bean-green.png" alt="">Hecho al<br>momento</span>
+        <a href="#menu" class="price-tag price-tag--cold" data-tab-link="frias">Soda italiana <b>$57</b></a>
+        <a href="#menu" class="price-tag price-tag--hot" data-tab-link="calientes">Latte <b>$42</b></a>
+      </div>
+
+      <a href="#menu" class="scroll-cue" aria-label="Bajar al menú">
+        <span>Desliza</span>
+        <img src="assets/img/bean-green.png" alt="">
+      </a>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Expresso doble</span><img src="assets/img/bean-cream.png" alt="">
+        <span>Latte helado</span><img src="assets/img/bean-cream.png" alt="">
+        <span>Soda italiana</span><img src="assets/img/bean-cream.png" alt="">
+        <span>Horchata</span><img src="assets/img/bean-cream.png" alt="">
+        <span>Té chai</span><img src="assets/img/bean-cream.png" alt="">
+        <span>Capuccino</span><img src="assets/img/bean-cream.png" alt="">
+        <span>Expresso doble</span><img src="assets/img/bean-cream.png" alt="">
+        <span>Latte helado</span><img src="assets/img/bean-cream.png" alt="">
+        <span>Soda italiana</span><img src="assets/img/bean-cream.png" alt="">
+        <span>Horchata</span><img src="assets/img/bean-cream.png" alt="">
+        <span>Té chai</span><img src="assets/img/bean-cream.png" alt="">
+        <span>Capuccino</span><img src="assets/img/bean-cream.png" alt="">
+      </div>
+    </div>
+
+    <!-- MENÚ -->
+    <section class="menu" id="menu">
+      <div class="section-head reveal">
+        <h2 class="script script--gold">Menú</h2>
+        <p>Toca una bebida para verla. Precios en pesos mexicanos.</p>
+      </div>
+
+      <div class="tabs reveal" role="tablist" aria-label="Categorías del menú">
+        <button class="tab is-active" role="tab" aria-selected="true" data-tab="calientes">Calientes <small>355 ml</small></button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="frias">Frías <small>473 ml</small></button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="extras">Extras</button>
+      </div>
+
+      <div class="menu__layout">
+        <div class="menu__board reveal">
+          <img src="assets/img/leafL-green.png" class="menu__leaf menu__leaf--l" alt="" aria-hidden="true">
+
+          <div class="panel is-active" id="calientes" role="tabpanel">
+            <div class="panel__head"><h3>Calientes</h3><span class="size">355 ML</span></div>
+            <ul class="items">
+              <li tabindex="0" data-desc="Dos shots de expresso. Corto e intenso."><span>Expresso doble</span><i></i><b>$27</b></li>
+              <li tabindex="0" data-desc="Expresso alargado con agua caliente. Para tomar despacio."><span>Americano</span><i></i><b>$32</b></li>
+              <li tabindex="0" data-desc="Expresso, leche vaporizada y una buena capa de espuma."><span>Capuccino</span><i></i><b>$40</b></li>
+              <li tabindex="0" data-desc="Expresso con más leche y espuma ligera. Pídelo con sabor." data-tag="La más pedida"><span>Latte <em class="tag">La más pedida</em></span><i></i><b>$42</b></li>
+              <li tabindex="0" data-desc="Chocolate caliente preparado con leche."><span>Chocolate</span><i></i><b>$40</b></li>
+              <li tabindex="0" data-desc="Infusión caliente de frutas, sin cafeína."><span>Tizana</span><i></i><b>$42</b></li>
+              <li tabindex="0" data-desc="Horchata caliente con canela."><span>Horchata</span><i></i><b>$42</b></li>
+              <li tabindex="0" data-desc="Té negro con especias y leche."><span>Té Chai</span><i></i><b>$42</b></li>
+            </ul>
+          </div>
+
+          <div class="panel" id="frias" role="tabpanel" hidden>
+            <div class="panel__head"><h3>Frías</h3><span class="size">473 ML</span></div>
+            <ul class="items">
+              <li tabindex="0" data-desc="Expresso y leche fría sobre hielo."><span>Latte helado</span><i></i><b>$57</b></li>
+              <li tabindex="0" data-desc="Agua mineral con jarabe de fresa o de mango y mucho hielo." data-tag="La más pedida"><span>Soda italiana <em class="tag">La más pedida</em><small>Fresa y mango</small></span><i></i><b>$57</b></li>
+              <li tabindex="0" data-desc="Chocolate frío con hielo."><span>Chocolate helado</span><i></i><b>$52</b></li>
+            </ul>
+          </div>
+
+          <div class="panel" id="extras" role="tabpanel" hidden>
+            <div class="panel__head"><h3>Extras</h3><span class="size">+ $10</span></div>
+            <ul class="items">
+              <li tabindex="0" data-desc="Caramelo, vainilla o rompope para tu latte o capuccino."><span>Sabores para latte y capuccino <small>Caramelo, vainilla y rompope</small></span><i></i><b>$10</b></li>
+              <li tabindex="0" data-desc="Perlas que revientan en la boca. Van con cualquier bebida fría."><span>Perlas de sabor</span><i></i><b>$10</b></li>
+            </ul>
+            <div class="flavors">
+              <span>Caramelo</span><span>Vainilla</span><span>Rompope</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="feature reveal" id="feature" aria-live="polite">
+          <div class="feature__img">
+            <img src="assets/img/cup-hot.png" id="featureImg" alt="">
+          </div>
+          <div class="feature__body">
+            <span class="feature__tag" id="featureTag" hidden></span>
+            <h3 id="featureName">Latte</h3>
+            <p id="featureDesc">Expresso con más leche y espuma ligera. Pídelo con sabor.</p>
+            <div class="feature__meta">
+              <span id="featureSize">355 ml</span>
+              <strong id="featurePrice">$42</strong>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <ul class="menu__notes reveal">
+        <li><img src="assets/img/bean-green.png" alt="">Todo se prepara al momento</li>
+        <li><img src="assets/img/bean-green.png" alt="">Para tomar aquí o para llevar</li>
+        <li><img src="assets/img/bean-green.png" alt="">Agrega un sabor por $10</li>
+      </ul>
+    </section>
+
+    <!-- MOOD -->
+    <section class="mood" id="mood">
+      <div class="section-head reveal">
+        <span class="pill">Para indecisos</span>
+        <h2>¿Cómo vienes hoy?</h2>
+        <p>Escoge una y te decimos qué pedir.</p>
+      </div>
+      <div class="mood__options reveal" id="moodOptions">
+        <button data-mood="sueno">Con sueño</button>
+        <button data-mood="calor">Con calor</button>
+        <button data-mood="antojo">Con antojo de algo dulce</button>
+        <button data-mood="chill">Sin prisa</button>
+        <button data-mood="estudio">A estudiar</button>
+      </div>
+      <div class="mood__result" id="moodResult" aria-live="polite">
+        <img src="assets/img/frame2-green.png" alt="" aria-hidden="true">
+        <div>
+          <p class="mood__label">Te recomendamos</p>
+          <h3 id="moodDrink">Escoge una opción</h3>
+          <p id="moodWhy">Y te decimos cuál pedir.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FRASES -->
+    <section class="frases" id="frases">
+      <h2 class="reveal">Lo que dicen nuestras paredes</h2>
+      <div class="frases__grid">
+        <figure class="reveal"><img src="assets/img/frame1-cream.png" alt="Letrero: El justo con café vivirá"></figure>
+        <figure class="reveal"><img src="assets/img/frame2-cream.png" alt="Marco con una taza de café humeante"></figure>
+        <figure class="reveal"><img src="assets/img/frame3-cream.png" alt="Letrero: Sin café es imposible agradar a Dios"></figure>
+      </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section class="about" id="nosotros">
+      <img src="assets/img/barista.jpg" alt="Barista sonriente sosteniendo un vaso de Cafecita" class="about__img">
+      <div class="about__card reveal">
+        <span class="pill pill--cream">Nosotros</span>
+        <h2>Detrás de la <em class="script">barra</em></h2>
+        <p>Somos un local pequeño. Aquí puedes sentarte a platicar o a estudiar, o pedir tu bebida y seguir tu camino. Si ya vienes seguido, seguro nos sabemos tu orden.</p>
+      </div>
+    </section>
+
+    <section class="values">
+      <div class="values__grid">
+        <article class="value reveal">
+          <span class="value__num">01</span>
+          <h3>Al momento</h3>
+          <p>No tenemos café recalentado. Cada vaso se prepara cuando lo pides.</p>
+        </article>
+        <article class="value reveal">
+          <span class="value__num">02</span>
+          <h3>Vasos que rinden</h3>
+          <p>355 ml en calientes y 473 ml en frías, para que te dure el rato.</p>
+        </article>
+        <article class="value reveal">
+          <span class="value__num">03</span>
+          <h3>Sabores de la casa</h3>
+          <p>Caramelo, vainilla y rompope. El de rompope es el que más nos piden probar.</p>
+        </article>
+      </div>
+
+      <div class="process reveal">
+        <h3 class="process__title">Así sale tu <em class="script">cafecito</em></h3>
+        <ol class="process__steps">
+          <li><span>1</span><strong>Pides</strong><p>En barra o por WhatsApp.</p></li>
+          <li><span>2</span><strong>Molemos</strong><p>El grano se muele para tu bebida.</p></li>
+          <li><span>3</span><strong>Preparamos</strong><p>Expresso, leche, hielo o sabor.</p></li>
+          <li><span>4</span><strong>A disfrutar</strong><p>Aquí en el local o para el camino.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- VISÍTANOS -->
+    <section class="visit" id="visitanos">
+      <img src="assets/img/bean-green.png" class="deco deco--bean b3" alt="" aria-hidden="true">
+      <div class="section-head reveal">
+        <h2>Ven por tu <em class="script script--gold">cafecito</em></h2>
+        <p>Abrimos todos los días.</p>
+      </div>
+
+      <div class="visit__main">
+        <div class="map reveal">
+          <iframe title="Mapa de Cafecita" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://maps.google.com/maps?q=Centro%20Hist%C3%B3rico%2C%20Ciudad%20de%20M%C3%A9xico&z=15&output=embed"></iframe>
+          <div class="map__label">
+            <strong>Cafecita</strong>
+            <span>Calle Ejemplo #123, Col. Centro, Tu Ciudad</span>
+            <a href="https://maps.google.com/?q=Centro%20Hist%C3%B3rico%2C%20Ciudad%20de%20M%C3%A9xico" target="_blank" rel="noopener" class="btn btn--small">Cómo llegar</a>
+          </div>
+        </div>
+
+        <div class="hours reveal">
+          <div class="hours__head">
+            <svg class="card__icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="25" r="17"/><path d="M24 15v10l7 5M18 5h12"/></svg>
+            <h3>Horario</h3>
+            <span class="status" id="openStatus"></span>
+          </div>
+          <ul class="hours__list" id="hoursList">
+            <li data-day="1"><span>Lunes</span><b>8:00 – 21:00</b></li>
+            <li data-day="2"><span>Martes</span><b>8:00 – 21:00</b></li>
+            <li data-day="3"><span>Miércoles</span><b>8:00 – 21:00</b></li>
+            <li data-day="4"><span>Jueves</span><b>8:00 – 21:00</b></li>
+            <li data-day="5"><span>Viernes</span><b>8:00 – 21:00</b></li>
+            <li data-day="6"><span>Sábado</span><b>9:00 – 20:00</b></li>
+            <li data-day="0"><span>Domingo</span><b>9:00 – 20:00</b></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="visit__grid">
+        <article class="card reveal">
+          <svg class="card__icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 10h32a3 3 0 0 1 3 3v17a3 3 0 0 1-3 3H20l-9 8v-8H8a3 3 0 0 1-3-3V13a3 3 0 0 1 3-3z"/><path d="M14 19h20M14 25h12"/></svg>
+          <h3>Pedidos</h3>
+          <p>Mándanos tu orden y pasa por ella sin esperar.</p>
+          <a href="#" class="btn btn--small">WhatsApp</a>
+        </article>
+        <article class="card reveal">
+          <svg class="card__icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="11" width="38" height="26" rx="4"/><path d="M5 19h38M11 29h8"/></svg>
+          <h3>Formas de pago</h3>
+          <p>Efectivo, tarjeta y transferencia.</p>
+        </article>
+        <article class="card reveal">
+          <svg class="card__icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M12 18h22v12a9 9 0 0 1-9 9h-4a9 9 0 0 1-9-9z"/><path d="M34 21h3a4 4 0 0 1 0 8h-3M17 7c-2 3 2 4 0 7M23 7c-2 3 2 4 0 7M29 7c-2 3 2 4 0 7"/></svg>
+          <h3>En el local</h3>
+          <p>Mesas para quedarte, enchufes y Wi-Fi.</p>
+        </article>
+      </div>
+
+      <div class="insta reveal">
+        <div class="insta__head">
+          <h3>Síguenos <span>@cafecita</span></h3>
+          <a href="#" class="btn btn--ghost btn--small">Ir a Instagram</a>
+        </div>
+        <div class="insta__grid">
+          <a href="#" class="insta__item insta__item--photo"><img src="assets/img/barista.jpg" alt="Barista con un vaso de Cafecita"></a>
+          <a href="#" class="insta__item insta__item--kraft"><img src="assets/img/cup-hot.png" alt="Vaso caliente de Cafecita"></a>
+          <a href="#" class="insta__item insta__item--green"><img src="assets/img/frame1-cream.png" alt="Letrero: El justo con café vivirá"></a>
+          <a href="#" class="insta__item insta__item--cream"><img src="assets/img/cup-cold.png" alt="Soda italiana de fresa"></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="assets/img/logo-cream.png" alt="Cafecita" class="footer__logo">
+    <p>Un cafecito y seguimos.</p>
+    <div class="footer__social">
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+      <a href="#">Facebook</a>
+    </div>
+    <small>© <span id="year"></span> Cafecita. Todos los derechos reservados.</small>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
